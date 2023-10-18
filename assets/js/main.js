@@ -39,6 +39,7 @@ let singlePageProduct = [];
 let sideNaveProduct = [];
 
 //Header Home Page
+
 let headerDiv = document.getElementById("headerHomePage");
 
 // header Title
@@ -427,6 +428,7 @@ function cartFooter(arr) {
 function home() {
     document.getElementById("containerSingleProduct").style.display = "none";
     document.getElementById("contact").style.display = "none";
+    document.getElementById("aboutUs").style.display = "none";
     document.getElementById("container").style.display = "block";
 }
 
@@ -443,7 +445,16 @@ function closeNav() {
 function contact() {
     document.getElementById("container").style.display = "none";
     document.getElementById("containerSingleProduct").style.display = "none";
+    document.getElementById("aboutUs").style.display = "none";
     document.getElementById("contact").style.display = "flex";
+}
+
+function aboutUs() {
+    document.getElementById("container").style.display = "none";
+    document.getElementById("containerSingleProduct").style.display = "none";
+    document.getElementById("contact").style.display = "none";
+    document.getElementById("aboutUs").style.display = "flex";
+
 }
 
 function badgeCount(){
