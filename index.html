@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favIcon -->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- my custom Css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Rental House</title>
+</head>
+
+<body>
+    <!-- shop side bar -->
+
+    <div id="mySidenav" class="slidNav">
+        <div class="addToCardHeader">
+            <a class="closeBtn" onclick="closeNav()">
+                <i class="fa fa-times"></i>
+            </a>
+            <p class="addToCardTitle">سبد خرید</p>
+        </div>
+        <div class="shopItems" id="shopItems">
+            <!-- <div class="shopItem">
+                <img src="assets/img/house.png" alt="" class="imageShop">
+                <div class="contentShop">
+                    <p class="houseTitle">ویلا شمال</p>
+                    <p class="housePrice">ریال 50000000</p>
+                </div>
+                <input type="number" class="houseNum">
+                <i class="houseDelete fa fa-trash-o"></i>
+            </div> -->
+        </div>
+        <div class="shopFooter" id="shopFooter">
+            <!-- <div class="totalPrice">
+                <div class="mainPrice">50000000 ریال</div>
+                <div class="tax">
+                    <span>9% مالیات:</span>
+                    <span>4500000 ریال</span>
+                </div>
+            </div>
+            <button class="purchase">تسویه حساب</button> -->
+        </div>
+    </div>
+    <!-- Navigation Menu -->
+    <div class="navHeader">
+        <!-- logo -->
+        <div class="navRight">
+            <a onclick="home()";><img src="assets/img/logo.png"></a>
+        </div>
+        <!-- nav menu -->
+        <div class="navMiddle">
+            <ul class="navMenu">
+                <li><a class="nav active" onclick="home()">صفحه نخست</a></li>
+                <li><a class="nav " >اجاره</a></li>
+                <li><a class="nav " >درباره ما</a></li>
+                <li><a class="nav " onclick="contact()">ارتباط با ما</a></li>
+            </ul>
+        </div>
+        <!-- login btn -->
+        <div class="navLeft">
+            <button class="btnLogin">
+                <span class="iconLogin"><i class="fa fa-sign-in" aria-hidden="true"></i></span>
+                <span class="textLogin">ورود/ ثبت نام</span>
+            </button>
+            <button class="iconShop" id="iconShop" onclick="openNav()">
+                <span class="notify-badge" id="notifyBadge" style="display: none;"></span>
+                <i class="fa fa-shopping-cart"></i>
+            </button>
+        </div>
+    </div>
+    <!-- divider -->
+    <div class="divider"></div>
+    <!-- home page -->
+    <div class="mainContainer" id="container">
+        <div class="headeBanner" id="headerHomePage"></div>
+
+        <div class="houseBox" id="products"></div>
+
+        <div class="mainInfinityGallery" id="gallery">
+            <div class="infinityGallery">
+                <img src="assets/img/banner.png" class="infinityGallertImg">
+                <img src="assets/img/banner.png" class="infinityGallertImg">
+                <img src="assets/img/banner.png" class="infinityGallertImg">
+                <img src="assets/img/banner.png" class="infinityGallertImg">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- single Product Page -->
+    <div class="mainSingleProduct" id="containerSingleProduct">
+
+        <div class="singleProductGallery" id="singleProductGallery"></div>
+
+        <div class="singleProductContent" id="singleProductContent"></div>
+
+    </div>
+
+
+
+    <!-- contact us -->
+    <div id="contact">
+        <div class="containerContact">
+            <div class="contact">
+                <h1 class="titleContact">ارتباط با ما</h1>
+                <div class="listContact">
+                    <div class="emailContact">
+                        <span class="iconEmail"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                        <span class="contentEmail">info@rentalhouse.com</span>
+                    </div>
+                    <div class="addressContact">
+                        <span class="iconAddress"><i class="fa fa-location-arrow" aria-hidden="true"></i></i></span>
+                        <span class="contentAddress">تهران - خیابان بهشتی - خیابان آپادانا</span>
+                    </div>
+                    <div class="telContact">
+                        <span class="iconTel"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                        <span class="contentTel">021-88569874</span>
+                    </div>
+                </div>
+            </div>
+            <div class="contactForm">
+                <div class="fullName">
+                    <span class="inputFName">
+                        <input type="text" placeholder="نام">
+                    </span>
+                    <span class="inputLName">
+                        <input type="text" placeholder="نام خانوادگی">
+                    </span>
+                </div>
+                <input class="emailForm" type="email" placeholder="ایمیل">
+                <textarea class="commentForm" id="" cols="10" rows="5" placeholder="متن"></textarea>
+                <input type="button" value="ثبت" class="btnForm" id="">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="rowTop">
+            <div class="footerOne">
+                <img src="assets/img/logo.png" class="logoFooter">
+                <p class="footerAddress">
+                <ul class="footerList">
+                    <li>آدرس:میدان آرژانتین-خیابان الوند</li>
+                    <li>تلفن: 021-88651236</li>
+                    <li>ایمیل: info@rentalhouse.com</li>
+                </ul>
+                </p>
+            </div>
+            <div class="footerTwo">
+                <ul class="footerList">
+                    <li class="linkFooter">اجاره ویلا</li>
+                    <li class="linkFooter">اجاره سوییت</li>
+                    <li class="linkFooter">اجاره خانه</li>
+                    <li class="linkFooter">اجاره آپارتمان</li>
+                    <li class="linkFooter">اجاره کلبه</li>
+                </ul>
+            </div>
+            <div class="footerThere">
+                <ul class="footerList">
+                    <li class="linkFooter">تهران</li>
+                    <li class="linkFooter">مازندران</li>
+                    <li class="linkFooter">گیلان</li>
+                    <li class="linkFooter">شیراز</li>
+                    <li class="linkFooter">قشم</li>
+                </ul>
+            </div>
+            <div class="footerFour">
+                <div class="email">
+                    <input class="emailFooter" type="email" placeholder="ایمیل">
+                    <input class="btnEmailFooter" type="submit" value="ثبت">
+                </div>
+                <div class="socialIcon">
+                    <div class="socialIconItem"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                    <div class="socialIconItem"><i class="fa fa-youtube" aria-hidden="true"></i></div>
+                </div>
+                <div class="socialIcon">
+                    <div class="socialIconItem"><i class="fa fa-whatsapp" aria-hidden="true"></i></div>
+                    <div class="socialIconItem"><i class="fa fa-telegram" aria-hidden="true"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="rowBottom">
+            <div class="allRight">
+                تمامی حقوق سایت برای Rental House محفوظ است. | پاییز 1402
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

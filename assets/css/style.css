@@ -1,0 +1,734 @@
+@font-face {
+    font-family: 'Iran Sans';
+    src: url('../font/IRANSansWeb.eot');
+    src: url('../font/IRANSansWeb.woff') format('woff'),
+        url('../font/IRANSansWeb.ttf') format('ttf'),
+        url('../font/IRANSansWeb.woff2') format('woff2');
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    direction: rtl;
+    font-family: 'Iran Sans';
+
+}
+
+.navHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #c6c6c6;
+    position: fixed;
+    background: #fff;
+    width: 100%;
+    z-index: 999;
+}
+
+.navRight img {
+    width: 300px;
+    padding-right: 18px;
+}
+
+ul.navMenu {
+    display: flex;
+    list-style: none;
+}
+
+.navMiddle {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+li a.nav {
+    margin: 18px;
+    color: #333;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    font-family: 'Iran Sans';
+}
+
+.navLeft {
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+}
+li .nav {
+    cursor: pointer;
+}
+
+button.btnLogin {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #b1b1b1;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.iconShop {
+    margin-right: 10px;
+    padding: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    border: none;
+    color: #009688;
+
+}
+
+.iconShop {
+    position: relative;
+    padding-top: 20px;
+    display: inline-block;
+}
+
+.notify-badge {
+    position: absolute;
+    right: 18px;
+    top: 0px;
+    background: red;
+    text-align: center;
+    border-radius: 30px 30px 30px 30px;
+    color: white;
+    padding: 6px 8px;
+    font-size: 8px;
+}
+
+span.textLogin,
+span.iconLogin {
+    color: #3c3c3c;
+    font-family: 'Iran Sans';
+    font-size: 12px;
+}
+
+a.nav.active {
+    color: #017236;
+}
+
+li>a::after {
+    content: "";
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0;
+    top: 5px;
+    background: transparent;
+    transition: all 0.3s;
+
+}
+
+li>a:hover::after,
+li>a.active-nav::after {
+    width: 100%;
+    background: #017236;
+}
+
+/* side nave */
+.slidNav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    background-color: #f6f6f6;
+    border-right: 1px solid #d9d9d9;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.addToCardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #bbbbbb;
+    margin: 2px;
+    height: 8%;
+}
+
+.slidNav .closeBtn {
+    text-decoration: none;
+    color: #8b8b8b;
+    font-size: 24px;
+}
+
+p.addToCardTitle {
+    font-size: 18px;
+    color: #8b8b8b;
+}
+
+.shopItems {
+    height: 65%;
+}
+
+.shopItem {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    direction: ltr;
+    padding: 15px 0px;
+    box-shadow: 0 2px 2px 0px #c2c2c261;
+    margin: 10px 0;
+    background-color: #fff;
+}
+
+img.imageShop {
+    width: 100px;
+    border-radius: 12px;
+}
+
+p.houseTitle,
+p.housePrice {
+    color: #707070;
+    font-size: 15px;
+}
+
+span.houseNum {
+    width: 20px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 2px 1px #0000002b;
+}
+
+span.boxMaxMin{
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    padding: 0;
+}
+.iconMax {
+    cursor: pointer;
+}
+.iconMin {
+    cursor: pointer;
+}
+
+i.houseDelete.fa.fa-trash-o {
+    font-size: 18px;
+}
+
+i.houseDelete.fa.fa-trash-o:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.totalPrice {
+    border-bottom: 1px solid #bbbbbb;
+}
+
+.shopFooter {
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 5px;
+}
+
+.mainPrice,
+.tax {
+    padding: 10px;
+    border-top: 1px solid #bbbbbb;
+}
+
+button.purchase {
+    padding: 6px;
+    margin-top: 6px;
+    border: none;
+    background: #009688;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Iran Sans';
+}
+
+/* divider */
+.divider {
+    height: 85px;
+}
+
+/* header banner */
+.headeBanner {
+    background: linear-gradient(0deg, rgb(0 0 0 / 30%), rgb(0 0 0 / 70%)), url(../img/banner-header.jpg);
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1.headerTitle {
+    color: #fff;
+    padding: 30px;
+}
+
+.inputsSearch {
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 40%;
+}
+
+input#searchCity,
+input#searchDate,
+input#searchPerson {
+    padding: 12px;
+    background-color: #fff;
+    border-left: 1px solid #a4a4a4 !important;
+    border: none;
+    font-size: 16px;
+    font-family: 'Iran Sans';
+    color: #a4a4a4;
+}
+
+input#btnSearch {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: #fff;
+    border: 1px solid #afafaf;
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 16px;
+    font-family: 'Iran Sans';
+    color: #a4a4a4;
+}
+
+input:focus {
+    outline: none;
+}
+
+/* house box */
+.houseBox {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardHouse {
+    max-width: 350px;
+    margin: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0 0 2px 2px #cbcbcb54;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.cardHouse img {
+    border-radius: 16px;
+    padding: 10px;
+}
+
+.cardContent {
+    margin: 10px;
+    line-height: 35px;
+    border-bottom: 1px solid #cbcbcb;
+}
+
+p.shortDescription {
+    font-size: 15px;
+    color: #767676;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+
+.cardPrice {
+    margin: 10px;
+    flex-direction: row;
+    display: flex;
+}
+
+p.everyNight {
+    width: 50%;
+    color: #777;
+    justify-content: start;
+}
+
+p.everyNightPrice {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    color: #777;
+}
+
+/* infinity Gallery */
+.mainInfinityGallery {
+    width: 100%;
+    overflow: hidden;
+}
+
+.infinityGallery {
+    display: flex;
+    width: 100%;
+    animation: bannermove 300s linear infinite;
+    padding-top: 85px;
+    padding-bottom: 100px;
+    padding-left: 0px;
+    margin: 0px;
+
+}
+
+img.infinityGallertImg {
+    display: block;
+    width: 100%;
+    margin-left: 25px;
+}
+
+/* footer */
+.footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1px solid #c6c6c6;
+    background-color: #fff;
+    margin-top: 10px;
+}
+
+.rowTop {
+    display: flex;
+    border-bottom: 1px solid #bfbfbf;
+}
+
+.footerOne,
+.footerTwo,
+.footerThere,
+.footerFour {
+    width: 25%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img.logoFooter {
+    width: 200px;
+}
+
+ul.footerList {
+    list-style-type: none;
+    padding: 10px;
+    line-height: 45px;
+}
+
+li.linkFooter {
+    cursor: pointer;
+    color: #333;
+}
+
+li.linkFooter:hover {
+    color: #017236;
+}
+
+.socialIcon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.socialIconItem {
+    border: 2px solid #017236;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    vertical-align: middle;
+    padding: 9px 16px;
+    color: #017236;
+    margin: 5px;
+    font-size: 25px;
+}
+
+.email {
+    margin: 20px 0px;
+}
+
+input.emailFooter {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #9E9E9E;
+    margin: 5px;
+    font-size: 15px;
+    font-family: 'Iran Sans';
+}
+
+.btnEmailFooter {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #9E9E9E;
+    border-radius: 8px;
+    font-size: 15px;
+    width: 60px;
+    font-family: 'Iran Sans';
+    color: #767676;
+    cursor: pointer;
+}
+
+.rowBottom {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    color: #848484;
+}
+
+
+
+
+
+
+
+/* body single Product */
+.mainSingleProduct {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 60px 0;
+    margin: 0;
+}
+
+.singleProductGallery {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainSingleProductImage {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+img.activeImage {
+    max-width: 500px;
+}
+
+.singleProductImages {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+img.itemImage {
+    max-width: 170px;
+    padding: 10px;
+}
+
+.singleProductContent {
+    width: 50%;
+    max-width: 42%;
+}
+
+h3.titleContentSingleProduct {
+    color: #686868;
+}
+
+h4.priceContentSingleProduct {
+    color: #686868;
+}
+
+.headerContentSingleProduct {
+    border-bottom: 1px solid #e5e5e5;
+    line-height: 2.5;
+}
+
+p.ContentSingleProduct {
+    text-align: justify;
+    font-size: 15px;
+    padding-top: 20px;
+    color: #666;
+}
+
+.footerContentSingleProduct {
+    padding-top: 20px;
+}
+
+button.addToCardSingle {
+    width: 250px;
+    padding: 15px;
+    font-size: 18px;
+    background: #fff;
+    color: #878787;
+    border: 2px solid #b7b7b7;
+    border-radius: 6px;
+    margin-top: 5%;
+}
+
+button.addToCardSingle:hover {
+    background: #009688;
+    color: #fff;
+    border: none;
+}
+
+input.dateSingleProduct {
+    width: 120px;
+    padding: 10px;
+    background: #fff;
+    color: #878787;
+    border: 2px solid #b7b7b7;
+    border-radius: 6px;
+    margin-left: 10px;
+}
+
+input.NumberSingleProduct {
+    width: 120px;
+    padding: 10px;
+    background: #fff;
+    color: #878787;
+    border: 2px solid #b7b7b7;
+    border-radius: 6px;
+}
+
+@media screen and (max-height: 450px) {
+    .slidNav {
+        padding-top: 15px;
+    }
+
+    .slidNav a {
+        font-size: 18px;
+    }
+}
+
+
+/* contact us */
+
+.containerContact {
+    width: 80%;
+    display: flex;
+        margin-bottom: 150px;
+        margin-top: 150px;
+    
+}
+div#contact {
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 10%;
+    box-shadow:0 0 12px 4px #dfdfdf;;
+    margin-left: 100px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background-color: #009688;
+    z-index: 99;
+    margin-left: -50px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 100px;
+    border-radius: 4px;
+}
+
+.inputFName input[type="text"],
+.inputLName input[type="text"] {
+    width: 49%;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #d1d1d1;
+}
+
+input.emailForm {
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #d1d1d1;
+}
+
+textarea.commentForm {
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #d1d1d1;
+}
+
+input.btnForm {
+    width: 150px;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 2px solid #d1d1d1;
+    background-color: #fff;
+    color: #707070;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input.btnForm:hover {
+    background-color: #009688;
+    color: #fff;
+    border: 2px solid #009688;
+}
+
+.contact {
+    line-height: 6rem;
+    color: #fff;
+    padding-right: 30px;
+    padding-top: 20px;
+}
+
+h1.titleContact {
+    padding-right: 100px;
+}
+
+i.fa.fa-envelope,
+i.fa.fa-location-arrow,
+i.fa.fa-phone {
+    font-size: 20px;
+    padding: 20px;
+    background-color: #e2e2e2;
+    border-radius: 50%;
+    color: #009688;
+}
+
+span.contentEmail,
+span.contentTel,
+span.contentAddress {
+    padding-right: 15px;
+}
+
+textarea.commentForm:focus {
+    outline: none;
+}
+
+/* animation infinity gallery */
+@keyframes bannermove {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
