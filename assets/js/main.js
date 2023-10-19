@@ -11,7 +11,7 @@ const houses = [
         id: 2,
         img: "house.png",
         title: " خانه ویلایی کردان",
-                price: "50000000",
+        price: "50000000",
         description: "ویلایی دربست - بدون سرایدار/نگهبان 1 تخت (1 تخت دو‌نفره).1 اتاق.70 متر users 2 نفر ظرفیت استاندارد + 2 نفر اضافه هزینه هر نفر اضافه به ازای هر شب 250,000 تومان key حداقل مدت اقامت 2 شب ورود از 14:00 تا 00:00 - خروج 12:00 flash رزرو آنی رزرو سریع اقامتگاه، بدون نیاز به تایید میزبان medal مهمان نواز اقامتگاه‌هایی با میزان رضایت‌‌مندی بالای مهمانان درباره این ویلا گزارش مغایرت آگهی ✅ اینبار تجربه آسان بدست می آید با سفری زیارتی و گردشی، آسایش و رفاه منزل شخصیتان را با ما... نمایش بیشتر اطلاعات ساختمان تیپ سازههم‌سطح تعداد طبقات2 طبقه طبقه این واحد1 متراژ زمین95 متر متراژ بنا70 متر تعداد پله هاکمتر از 5",
         count: "1"
     },
@@ -34,12 +34,12 @@ const houses = [
 
 ]
 
-    
+
 let singlePageProduct = [];
 let sideNaveProduct = [];
 
 //Header Home Page
-
+let container = document.getElementById("container");
 let headerDiv = document.getElementById("headerHomePage");
 
 // header Title
@@ -134,9 +134,9 @@ houses.forEach(product => {
     productItem.onclick = () => {
         const home = document.getElementById("container");
         home.style.display = "none";
-        document.getElementById("singleProductContent").innerHTML="";
-        document.getElementById("singleProductGallery").innerHTML="";
-        document.getElementById("containerSingleProduct").style.display="flex";
+        document.getElementById("singleProductContent").innerHTML = "";
+        document.getElementById("singleProductGallery").innerHTML = "";
+        document.getElementById("containerSingleProduct").style.display = "flex";
         // singlePageProduct.push(product);
         //single product Page
         const singleProductGallery = document.getElementById("singleProductGallery");
@@ -229,14 +229,14 @@ houses.forEach(product => {
         addToCardSingle.onclick = () => {
 
             openNav();
-            
 
-                     
+
+
             creatShopItems(product, 'add');
 
 
         }
-        
+
 
     }
 
@@ -430,6 +430,11 @@ function home() {
     document.getElementById("contact").style.display = "none";
     document.getElementById("aboutUs").style.display = "none";
     document.getElementById("container").style.display = "block";
+
+    document.getElementById("headerHomePage").style.display = "flex";
+    document.getElementById("products").style.display = "flex";
+    document.getElementById("gallery").style.display = "flex";
+    document.getElementById("regDiv").style.display="none"; 
 }
 
 
@@ -443,49 +448,211 @@ function closeNav() {
 
 
 function contact() {
-    document.getElementById("container").style.display = "none";
+    document.getElementById("headerHomePage").style.display = "none";
+    document.getElementById("products").style.display = "none";
+    document.getElementById("gallery").style.display = "none";
     document.getElementById("containerSingleProduct").style.display = "none";
     document.getElementById("aboutUs").style.display = "none";
+    document.getElementById("regDiv").style.display="none"; 
     document.getElementById("contact").style.display = "flex";
 }
 
 function aboutUs() {
-    document.getElementById("container").style.display = "none";
+    document.getElementById("headerHomePage").style.display = "none";
+    document.getElementById("products").style.display = "none";
+    document.getElementById("gallery").style.display = "none";
     document.getElementById("containerSingleProduct").style.display = "none";
     document.getElementById("contact").style.display = "none";
+    document.getElementById("regDiv").style.display="none"; 
     document.getElementById("aboutUs").style.display = "flex";
 
 }
 
-function badgeCount(){
-   if(sideNaveProduct.length>0){
-   let newBadge=document.getElementById("notifyBadge");
-   newBadge.textContent=sideNaveProduct.length;
-   document.getElementById("notifyBadge").style.display="block"
-   }
-   if(sideNaveProduct.length==0){
-    document.getElementById("notifyBadge").style.display="none"
-   }
+function badgeCount() {
+    if (sideNaveProduct.length > 0) {
+        let newBadge = document.getElementById("notifyBadge");
+        newBadge.textContent = sideNaveProduct.length;
+        document.getElementById("notifyBadge").style.display = "block"
+    }
+    if (sideNaveProduct.length == 0) {
+        document.getElementById("notifyBadge").style.display = "none"
+    }
 
 }
 
 
-//Single Page Products
+const regDiv = document.createElement("div");
+regDiv.setAttribute("class", "regDiv");
+regDiv.setAttribute("id", "regDiv");
+container.appendChild(regDiv);
+
+const regDiveImg = document.createElement("div");
+regDiveImg.setAttribute("class", "regDiveImg");
+regDiveImg.setAttribute("id", "regDiveImg");
+regDiv.appendChild(regDiveImg);
+
+const regImg = document.createElement("img");
+regImg.setAttribute("src", `assets/img/register.jpg`);
+regImg.setAttribute("class", "regImg");
+regDiveImg.appendChild(regImg);
+
+const regDivForm = document.createElement("div");
+regDivForm.setAttribute("class", "registerForm");
+regDivForm.setAttribute("id", "registerForm");
+regDiv.appendChild(regDivForm);
+
+const divTab= document.createElement("div");
+divTab.setAttribute("class", "divTab");
+regDivForm.appendChild(divTab);
+
+const tabReg= document.createElement("button");
+tabReg.setAttribute("class", "tabReg");
+tabReg.setAttribute("id", "tabReg");
+tabReg.textContent="ثبت نام";
+divTab.appendChild(tabReg);
+
+const tabLog= document.createElement("button");
+tabLog.setAttribute("class", "tabLog");
+tabLog.setAttribute("id", "tabLog");
+tabLog.textContent="ورود";
+divTab.appendChild(tabLog);
+
+const formContainer= document.createElement("div");
+formContainer.setAttribute("class", "formContainer");
+formContainer.setAttribute("id", "formContainer");
+regDivForm.appendChild(formContainer);
 
 
-// function singlePageProduct() {
+
+function register() {
+ formContainer.innerHTML="";
+
+    const formReg = document.createElement("div");
+    formReg.setAttribute("class", "formReg");
+    formReg.setAttribute("id", "formReg");
+    formContainer.appendChild(formReg);
+    
+    const formHeader = document.createElement("div");
+    formHeader.setAttribute("class", "formHeader");
+    formReg.appendChild(formHeader);
+
+    const formHeaderTitle = document.createElement("h2");
+    formHeaderTitle.setAttribute("class", "formHeaderTitle");
+    formHeaderTitle.textContent = "فرم ثبت نام";
+    formHeader.appendChild(formHeaderTitle);
+
+    const fullName = document.createElement("div");
+    fullName.setAttribute("class", "fullName");
+    formReg.appendChild(fullName);
+
+    const inputFname = document.createElement("input");
+    inputFname.setAttribute("class", "inputFname");
+    inputFname.setAttribute("type", "text");
+    inputFname.setAttribute("placeholder", "نام");
+    fullName.appendChild(inputFname);
+
+    const inputLname = document.createElement("input");
+    inputLname.setAttribute("class", "inputLname");
+    inputLname.setAttribute("type", "text");
+    inputLname.setAttribute("placeholder", "نام خانوادگی");
+    fullName.appendChild(inputLname);
+
+    const anotherInput = document.createElement("div");
+    anotherInput.setAttribute("class", "anotherInput");
+    formReg.appendChild(anotherInput);
+
+    const inputUsername = document.createElement("input");
+    inputUsername.setAttribute("class", "inputUsername");
+    inputUsername.setAttribute("type", "text");
+    inputUsername.setAttribute("placeholder", "نام کاربری");
+    anotherInput.appendChild(inputUsername);
+
+    const inputPassword = document.createElement("input");
+    inputPassword.setAttribute("class", "inputPassword");
+    inputPassword.setAttribute("type", "pass");
+    inputPassword.setAttribute("placeholder", "کلمه عبور");
+    anotherInput.appendChild(inputPassword);
+
+    const inputTel = document.createElement("input");
+    inputTel.setAttribute("class", "inputTel");
+    inputTel.setAttribute("type", "pass");
+    inputTel.setAttribute("placeholder", "تلفن همراه");
+    anotherInput.appendChild(inputTel);
+
+    const inputEmail = document.createElement("input");
+    inputEmail.setAttribute("class", "inputEmail");
+    inputEmail.setAttribute("type", "email");
+    inputEmail.setAttribute("placeholder", "ایمیل");
+    anotherInput.appendChild(inputEmail);
+
+    const inputbtnReg = document.createElement("input");
+    inputbtnReg.setAttribute("class", "inputbtnReg");
+    inputbtnReg.setAttribute("type", "button");
+    inputbtnReg.setAttribute("value", "ثبت");
+    anotherInput.appendChild(inputbtnReg);
+
+}
 
 
-//     const singleProductContainer = document.getElementById("containerSingleProduct");
 
-// houses.find(function(product, index){
-//     if (index[0] == index[product]) {
-//         const home = document.getElementById("container");
-//         home.style.display = "none"
+function login() {
+    formContainer.innerHTML="";
 
-//         const singleProductContent = document.getElementById("singleProductContent");
-//         singleProductContent.setAttribute("class", "singleProductContent");
+    const formLog = document.createElement("div");
+    formLog.setAttribute("class", "formLog");
+    formLog.setAttribute("id", "formLog");
+    formContainer.appendChild(formLog);
+    
+    const formHeader = document.createElement("div");
+    formHeader.setAttribute("class", "formHeader");
+    formLog.appendChild(formHeader);
 
-//     }
-// });
+    const formHeaderTitle = document.createElement("h2");
+    formHeaderTitle.setAttribute("class", "formHeaderTitle");
+    formHeaderTitle.textContent = "ورود";
+    formHeader.appendChild(formHeaderTitle);
+
+    const anotherInput = document.createElement("div");
+    anotherInput.setAttribute("class", "anotherInput");
+    formLog.appendChild(anotherInput);
+
+    const inputUsername = document.createElement("input");
+    inputUsername.setAttribute("class", "inputUsername");
+    inputUsername.setAttribute("type", "text");
+    inputUsername.setAttribute("placeholder", "نام کاربری");
+    anotherInput.appendChild(inputUsername);
+
+    const inputPassword = document.createElement("input");
+    inputPassword.setAttribute("class", "inputPassword");
+    inputPassword.setAttribute("type", "pass");
+    inputPassword.setAttribute("placeholder", "کلمه عبور");
+    anotherInput.appendChild(inputPassword);
+
+    const inputbtnLog = document.createElement("input");
+    inputbtnLog.setAttribute("class", "inputbtnLog");
+    inputbtnLog.setAttribute("type", "button");
+    inputbtnLog.setAttribute("value", "ثبت");
+    anotherInput.appendChild(inputbtnLog);
+
+}
+
+
+document.getElementById("regDiv").style.display="none";
+document.getElementById("btnLogin").onclick = () =>{
+    document.getElementById("headerHomePage").style.display = "none";
+    document.getElementById("products").style.display = "none";
+    document.getElementById("gallery").style.display = "none";
+    document.getElementById("contact").style.display = "none";
+    document.getElementById("aboutUs").style.display = "none";
+    document.getElementById("regDiv").style.display="flex"; 
+    login();
+}
+
+
+document.getElementById("tabReg").onclick = () =>{ 
+    register();
+}
+document.getElementById("tabLog").onclick = () =>{ 
+    login();
+}
 
