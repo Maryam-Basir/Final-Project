@@ -5,7 +5,7 @@ const houses = [
         title: " خانه ویلایی محمودآباد",
         price: "20000000",
         description: "ویلایی دربست - بدون سرایدار/نگهبان 1 تخت (1 تخت دو‌نفره).1 اتاق.70 متر users 2 نفر ظرفیت استاندارد + 2 نفر اضافه هزینه هر نفر اضافه به ازای هر شب 250,000 تومان key حداقل مدت اقامت 2 شب ورود از 14:00 تا 00:00 - خروج 12:00 flash رزرو آنی رزرو سریع اقامتگاه، بدون نیاز به تایید میزبان medal مهمان نواز اقامتگاه‌هایی با میزان رضایت‌‌مندی بالای مهمانان درباره این ویلا گزارش مغایرت آگهی ✅ اینبار تجربه آسان بدست می آید با سفری زیارتی و گردشی، آسایش و رفاه منزل شخصیتان را با ما... نمایش بیشتر اطلاعات ساختمان تیپ سازههم‌سطح تعداد طبقات2 طبقه طبقه این واحد1 متراژ زمین95 متر متراژ بنا70 متر تعداد پله هاکمتر از 5",
-        count: "1"
+        count: "1",
     },
     {
         id: 2,
@@ -13,7 +13,7 @@ const houses = [
         title: " خانه ویلایی کردان",
         price: "50000000",
         description: "ویلایی دربست - بدون سرایدار/نگهبان 1 تخت (1 تخت دو‌نفره).1 اتاق.70 متر users 2 نفر ظرفیت استاندارد + 2 نفر اضافه هزینه هر نفر اضافه به ازای هر شب 250,000 تومان key حداقل مدت اقامت 2 شب ورود از 14:00 تا 00:00 - خروج 12:00 flash رزرو آنی رزرو سریع اقامتگاه، بدون نیاز به تایید میزبان medal مهمان نواز اقامتگاه‌هایی با میزان رضایت‌‌مندی بالای مهمانان درباره این ویلا گزارش مغایرت آگهی ✅ اینبار تجربه آسان بدست می آید با سفری زیارتی و گردشی، آسایش و رفاه منزل شخصیتان را با ما... نمایش بیشتر اطلاعات ساختمان تیپ سازههم‌سطح تعداد طبقات2 طبقه طبقه این واحد1 متراژ زمین95 متر متراژ بنا70 متر تعداد پله هاکمتر از 5",
-        count: "1"
+        count: "1",
     },
     {
         id: 3,
@@ -21,7 +21,7 @@ const houses = [
         title: " خانه ویلایی قشم",
         price: "15000000",
         description: "ویلایی دربست - بدون سرایدار/نگهبان 1 تخت (1 تخت دو‌نفره).1 اتاق.70 متر users 2 نفر ظرفیت استاندارد + 2 نفر اضافه هزینه هر نفر اضافه به ازای هر شب 250,000 تومان key حداقل مدت اقامت 2 شب ورود از 14:00 تا 00:00 - خروج 12:00 flash رزرو آنی رزرو سریع اقامتگاه، بدون نیاز به تایید میزبان medal مهمان نواز اقامتگاه‌هایی با میزان رضایت‌‌مندی بالای مهمانان درباره این ویلا گزارش مغایرت آگهی ✅ اینبار تجربه آسان بدست می آید با سفری زیارتی و گردشی، آسایش و رفاه منزل شخصیتان را با ما... نمایش بیشتر اطلاعات ساختمان تیپ سازههم‌سطح تعداد طبقات2 طبقه طبقه این واحد1 متراژ زمین95 متر متراژ بنا70 متر تعداد پله هاکمتر از 5",
-        count: "1"
+        count: "1",
     },
     {
         id: 4,
@@ -29,7 +29,7 @@ const houses = [
         title: " خانه ویلایی تهران",
         price: "60000000",
         description: "ویلایی دربست - بدون سرایدار/نگهبان 1 تخت (1 تخت دو‌نفره).1 اتاق.70 متر users 2 نفر ظرفیت استاندارد + 2 نفر اضافه هزینه هر نفر اضافه به ازای هر شب 250,000 تومان key حداقل مدت اقامت 2 شب ورود از 14:00 تا 00:00 - خروج 12:00 flash رزرو آنی رزرو سریع اقامتگاه، بدون نیاز به تایید میزبان medal مهمان نواز اقامتگاه‌هایی با میزان رضایت‌‌مندی بالای مهمانان درباره این ویلا گزارش مغایرت آگهی ✅ اینبار تجربه آسان بدست می آید با سفری زیارتی و گردشی، آسایش و رفاه منزل شخصیتان را با ما... نمایش بیشتر اطلاعات ساختمان تیپ سازههم‌سطح تعداد طبقات2 طبقه طبقه این واحد1 متراژ زمین95 متر متراژ بنا70 متر تعداد پله هاکمتر از 5",
-        count: "1"
+        count: "1",
     }
 
 ]
@@ -120,7 +120,7 @@ houses.forEach(product => {
 
     const productPrice = document.createElement('p');
     productPrice.setAttribute("class", "everyNightPrice");
-    productPrice.textContent = product.price;
+    productPrice.textContent = Number(product.price).toLocaleString("fa-IR");
     productFooter.appendChild(productPrice);
 
     const currency = document.createElement('p');
@@ -185,7 +185,7 @@ houses.forEach(product => {
 
         const priceContentSingleProduct = document.createElement("h4");
         priceContentSingleProduct.setAttribute("class", "priceContentSingleProduct");
-        priceContentSingleProduct.textContent = product.price;
+        priceContentSingleProduct.textContent = Number(product.price).toLocaleString("fa-IR");
         headerContentSingleProduct.appendChild(priceContentSingleProduct);
 
         const currency = document.createElement('span');
@@ -303,7 +303,7 @@ function creatShopItems(product, mode) {
 
         const housePrice = document.createElement("p");
         housePrice.setAttribute("class", "housePrice");
-        housePrice.textContent = product.price;
+        housePrice.textContent = Number(product.price).toLocaleString("fa-IR");
         contentShop.appendChild(housePrice);
 
         const currency = document.createElement('span');
@@ -374,7 +374,7 @@ function cartFooter(arr) {
 
     const mainPrice = document.createElement("div");
     mainPrice.setAttribute("class", "mainPrice");
-    mainPrice.textContent = total;
+    mainPrice.textContent = Number(total).toLocaleString("fa-IR");
     totalPrice.appendChild(mainPrice);
 
     const currencyTotal = document.createElement('span');
@@ -392,7 +392,7 @@ function cartFooter(arr) {
     tax.appendChild(taxText);
 
     const taxcalculate = document.createElement("span");
-    taxcalculate.textContent = VAT;
+    taxcalculate.textContent = Number(VAT).toLocaleString("fa-IR");
     tax.appendChild(taxcalculate);
 
     const currencyTax = document.createElement('span');
@@ -406,7 +406,7 @@ function cartFooter(arr) {
     totalPrice.appendChild(totalCart);
 
     const totalPriceCart = document.createElement("span");
-    totalPriceCart.textContent = total + VAT;
+    totalPriceCart.textContent = Number(total + VAT).toLocaleString("fa-IR");
     totalCart.appendChild(totalPriceCart);
 
 
