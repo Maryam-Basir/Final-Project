@@ -6,6 +6,8 @@ const houses = [
         price: "20000000",
         description: "ویلایی دربست - بدون سرایدار/نگهبان 1 تخت (1 تخت دو‌نفره).1 اتاق.70 متر users 2 نفر ظرفیت استاندارد + 2 نفر اضافه هزینه هر نفر اضافه به ازای هر شب 250,000 تومان key حداقل مدت اقامت 2 شب ورود از 14:00 تا 00:00 - خروج 12:00 flash رزرو آنی رزرو سریع اقامتگاه، بدون نیاز به تایید میزبان medal مهمان نواز اقامتگاه‌هایی با میزان رضایت‌‌مندی بالای مهمانان درباره این ویلا گزارش مغایرت آگهی ✅ اینبار تجربه آسان بدست می آید با سفری زیارتی و گردشی، آسایش و رفاه منزل شخصیتان را با ما... نمایش بیشتر اطلاعات ساختمان تیپ سازههم‌سطح تعداد طبقات2 طبقه طبقه این واحد1 متراژ زمین95 متر متراژ بنا70 متر تعداد پله هاکمتر از 5",
         count: "1",
+        houseArea:"60",
+        location:"3"
     },
     {
         id: 2,
@@ -14,6 +16,8 @@ const houses = [
         price: "50000000",
         description: "ویلایی دربست - بدون سرایدار/نگهبان 1 تخت (1 تخت دو‌نفره).1 اتاق.70 متر users 2 نفر ظرفیت استاندارد + 2 نفر اضافه هزینه هر نفر اضافه به ازای هر شب 250,000 تومان key حداقل مدت اقامت 2 شب ورود از 14:00 تا 00:00 - خروج 12:00 flash رزرو آنی رزرو سریع اقامتگاه، بدون نیاز به تایید میزبان medal مهمان نواز اقامتگاه‌هایی با میزان رضایت‌‌مندی بالای مهمانان درباره این ویلا گزارش مغایرت آگهی ✅ اینبار تجربه آسان بدست می آید با سفری زیارتی و گردشی، آسایش و رفاه منزل شخصیتان را با ما... نمایش بیشتر اطلاعات ساختمان تیپ سازههم‌سطح تعداد طبقات2 طبقه طبقه این واحد1 متراژ زمین95 متر متراژ بنا70 متر تعداد پله هاکمتر از 5",
         count: "1",
+        houseArea:"100",
+        location:"2"
     },
     {
         id: 3,
@@ -22,6 +26,8 @@ const houses = [
         price: "15000000",
         description: "ویلایی دربست - بدون سرایدار/نگهبان 1 تخت (1 تخت دو‌نفره).1 اتاق.70 متر users 2 نفر ظرفیت استاندارد + 2 نفر اضافه هزینه هر نفر اضافه به ازای هر شب 250,000 تومان key حداقل مدت اقامت 2 شب ورود از 14:00 تا 00:00 - خروج 12:00 flash رزرو آنی رزرو سریع اقامتگاه، بدون نیاز به تایید میزبان medal مهمان نواز اقامتگاه‌هایی با میزان رضایت‌‌مندی بالای مهمانان درباره این ویلا گزارش مغایرت آگهی ✅ اینبار تجربه آسان بدست می آید با سفری زیارتی و گردشی، آسایش و رفاه منزل شخصیتان را با ما... نمایش بیشتر اطلاعات ساختمان تیپ سازههم‌سطح تعداد طبقات2 طبقه طبقه این واحد1 متراژ زمین95 متر متراژ بنا70 متر تعداد پله هاکمتر از 5",
         count: "1",
+        houseArea:"200",
+        location:"4"
     },
     {
         id: 4,
@@ -30,8 +36,30 @@ const houses = [
         price: "60000000",
         description: "ویلایی دربست - بدون سرایدار/نگهبان 1 تخت (1 تخت دو‌نفره).1 اتاق.70 متر users 2 نفر ظرفیت استاندارد + 2 نفر اضافه هزینه هر نفر اضافه به ازای هر شب 250,000 تومان key حداقل مدت اقامت 2 شب ورود از 14:00 تا 00:00 - خروج 12:00 flash رزرو آنی رزرو سریع اقامتگاه، بدون نیاز به تایید میزبان medal مهمان نواز اقامتگاه‌هایی با میزان رضایت‌‌مندی بالای مهمانان درباره این ویلا گزارش مغایرت آگهی ✅ اینبار تجربه آسان بدست می آید با سفری زیارتی و گردشی، آسایش و رفاه منزل شخصیتان را با ما... نمایش بیشتر اطلاعات ساختمان تیپ سازههم‌سطح تعداد طبقات2 طبقه طبقه این واحد1 متراژ زمین95 متر متراژ بنا70 متر تعداد پله هاکمتر از 5",
         count: "1",
+        houseArea:"40",
+        location:"1"
     }
 
+]
+
+
+cities=[
+    {
+        id:1,
+        name:"تهران"
+    },
+    {
+        id:2,
+        name:"کرج"
+    },
+    {
+        id:3,
+        name:"مازندران"
+    },
+    {
+        id:4,
+        name:"قشم"
+    }
 ]
 
 
@@ -104,10 +132,44 @@ houses.forEach(product => {
     productTitle.textContent = product.title;
     productContent.appendChild(productTitle);
 
-    const productDes = document.createElement('p');
-    productDes.setAttribute("class", "shortDescription");
-    productDes.textContent = product.description;
+    const productDes = document.createElement('div');
+    productDes.setAttribute("class", "bodyHouseCard");
     productContent.appendChild(productDes);
+   
+    const productLoc = document.createElement('div');
+    productLoc.setAttribute("class", "location");
+    productDes.appendChild(productLoc);
+
+    const productLocIcon = document.createElement('span');
+    productLocIcon.setAttribute("class", "fa fa-map-marker");
+    productLoc.appendChild(productLocIcon);
+    
+    const productLocContent = document.createElement('span');
+    productLocContent.setAttribute("class", "locContent");
+    const houseCity=cities.find(city =>{
+        let locationCity=Number(product.location)==city.id;
+       return locationCity;
+   })
+    productLocContent.textContent=houseCity.name;
+    productLoc.appendChild(productLocContent);
+    
+    const productArea = document.createElement('div');
+    productArea.setAttribute("class", "area");
+    productDes.appendChild(productArea);
+    
+    const productAreaIcon = document.createElement('span');
+    productAreaIcon.setAttribute("class", "fa fa-building-o");
+    productArea.appendChild(productAreaIcon);
+   
+    const productAreaContent = document.createElement('span');
+    productAreaContent.setAttribute("class", "areaContent");
+    productAreaContent.textContent=product.houseArea;
+    productArea.appendChild(productAreaContent);
+   
+    const productAreaM = document.createElement('span');
+    productAreaM.setAttribute("class", "areaM");
+    productAreaM.textContent="متر";
+    productArea.appendChild(productAreaM);
 
     const productFooter = document.createElement('div');
     productFooter.setAttribute("class", "cardPrice");
