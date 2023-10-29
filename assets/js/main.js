@@ -6,8 +6,8 @@ const houses = [
         price: "20000000",
         description: "ویلایی دربست - بدون سرایدار/نگهبان 1 تخت (1 تخت دو‌نفره).1 اتاق.70 متر users 2 نفر ظرفیت استاندارد + 2 نفر اضافه هزینه هر نفر اضافه به ازای هر شب 250,000 تومان key حداقل مدت اقامت 2 شب ورود از 14:00 تا 00:00 - خروج 12:00 flash رزرو آنی رزرو سریع اقامتگاه، بدون نیاز به تایید میزبان medal مهمان نواز اقامتگاه‌هایی با میزان رضایت‌‌مندی بالای مهمانان درباره این ویلا گزارش مغایرت آگهی ✅ اینبار تجربه آسان بدست می آید با سفری زیارتی و گردشی، آسایش و رفاه منزل شخصیتان را با ما... نمایش بیشتر اطلاعات ساختمان تیپ سازههم‌سطح تعداد طبقات2 طبقه طبقه این واحد1 متراژ زمین95 متر متراژ بنا70 متر تعداد پله هاکمتر از 5",
         count: "1",
-        houseArea:"60",
-        location:"3"
+        houseArea: "60",
+        location: "3"
     },
     {
         id: 2,
@@ -16,8 +16,8 @@ const houses = [
         price: "50000000",
         description: "ویلایی دربست - بدون سرایدار/نگهبان 1 تخت (1 تخت دو‌نفره).1 اتاق.70 متر users 2 نفر ظرفیت استاندارد + 2 نفر اضافه هزینه هر نفر اضافه به ازای هر شب 250,000 تومان key حداقل مدت اقامت 2 شب ورود از 14:00 تا 00:00 - خروج 12:00 flash رزرو آنی رزرو سریع اقامتگاه، بدون نیاز به تایید میزبان medal مهمان نواز اقامتگاه‌هایی با میزان رضایت‌‌مندی بالای مهمانان درباره این ویلا گزارش مغایرت آگهی ✅ اینبار تجربه آسان بدست می آید با سفری زیارتی و گردشی، آسایش و رفاه منزل شخصیتان را با ما... نمایش بیشتر اطلاعات ساختمان تیپ سازههم‌سطح تعداد طبقات2 طبقه طبقه این واحد1 متراژ زمین95 متر متراژ بنا70 متر تعداد پله هاکمتر از 5",
         count: "1",
-        houseArea:"100",
-        location:"2"
+        houseArea: "100",
+        location: "2"
     },
     {
         id: 3,
@@ -26,8 +26,8 @@ const houses = [
         price: "15000000",
         description: "ویلایی دربست - بدون سرایدار/نگهبان 1 تخت (1 تخت دو‌نفره).1 اتاق.70 متر users 2 نفر ظرفیت استاندارد + 2 نفر اضافه هزینه هر نفر اضافه به ازای هر شب 250,000 تومان key حداقل مدت اقامت 2 شب ورود از 14:00 تا 00:00 - خروج 12:00 flash رزرو آنی رزرو سریع اقامتگاه، بدون نیاز به تایید میزبان medal مهمان نواز اقامتگاه‌هایی با میزان رضایت‌‌مندی بالای مهمانان درباره این ویلا گزارش مغایرت آگهی ✅ اینبار تجربه آسان بدست می آید با سفری زیارتی و گردشی، آسایش و رفاه منزل شخصیتان را با ما... نمایش بیشتر اطلاعات ساختمان تیپ سازههم‌سطح تعداد طبقات2 طبقه طبقه این واحد1 متراژ زمین95 متر متراژ بنا70 متر تعداد پله هاکمتر از 5",
         count: "1",
-        houseArea:"200",
-        location:"4"
+        houseArea: "200",
+        location: "4"
     },
     {
         id: 4,
@@ -36,29 +36,29 @@ const houses = [
         price: "60000000",
         description: "ویلایی دربست - بدون سرایدار/نگهبان 1 تخت (1 تخت دو‌نفره).1 اتاق.70 متر users 2 نفر ظرفیت استاندارد + 2 نفر اضافه هزینه هر نفر اضافه به ازای هر شب 250,000 تومان key حداقل مدت اقامت 2 شب ورود از 14:00 تا 00:00 - خروج 12:00 flash رزرو آنی رزرو سریع اقامتگاه، بدون نیاز به تایید میزبان medal مهمان نواز اقامتگاه‌هایی با میزان رضایت‌‌مندی بالای مهمانان درباره این ویلا گزارش مغایرت آگهی ✅ اینبار تجربه آسان بدست می آید با سفری زیارتی و گردشی، آسایش و رفاه منزل شخصیتان را با ما... نمایش بیشتر اطلاعات ساختمان تیپ سازههم‌سطح تعداد طبقات2 طبقه طبقه این واحد1 متراژ زمین95 متر متراژ بنا70 متر تعداد پله هاکمتر از 5",
         count: "1",
-        houseArea:"40",
-        location:"1"
+        houseArea: "40",
+        location: "1"
     }
 
 ]
 
 
-cities=[
+cities = [
     {
-        id:1,
-        name:"تهران"
+        id: 1,
+        name: "تهران"
     },
     {
-        id:2,
-        name:"کرج"
+        id: 2,
+        name: "کرج"
     },
     {
-        id:3,
-        name:"مازندران"
+        id: 3,
+        name: "مازندران"
     },
     {
-        id:4,
-        name:"قشم"
+        id: 4,
+        name: "قشم"
     }
 ]
 
@@ -135,7 +135,7 @@ houses.forEach(product => {
     const productDes = document.createElement('div');
     productDes.setAttribute("class", "bodyHouseCard");
     productContent.appendChild(productDes);
-   
+
     const productLoc = document.createElement('div');
     productLoc.setAttribute("class", "location");
     productDes.appendChild(productLoc);
@@ -143,32 +143,32 @@ houses.forEach(product => {
     const productLocIcon = document.createElement('span');
     productLocIcon.setAttribute("class", "fa fa-map-marker");
     productLoc.appendChild(productLocIcon);
-    
+
     const productLocContent = document.createElement('span');
     productLocContent.setAttribute("class", "locContent");
-    const houseCity=cities.find(city =>{
-        let locationCity=Number(product.location)==city.id;
-       return locationCity;
-   })
-    productLocContent.textContent=houseCity.name;
+    const houseCity = cities.find(city => {
+        let locationCity = Number(product.location) == city.id;
+        return locationCity;
+    })
+    productLocContent.textContent = houseCity.name;
     productLoc.appendChild(productLocContent);
-    
+
     const productArea = document.createElement('div');
     productArea.setAttribute("class", "area");
     productDes.appendChild(productArea);
-    
+
     const productAreaIcon = document.createElement('span');
     productAreaIcon.setAttribute("class", "fa fa-building-o");
     productArea.appendChild(productAreaIcon);
-   
+
     const productAreaContent = document.createElement('span');
     productAreaContent.setAttribute("class", "areaContent");
-    productAreaContent.textContent=product.houseArea;
+    productAreaContent.textContent = product.houseArea;
     productArea.appendChild(productAreaContent);
-   
+
     const productAreaM = document.createElement('span');
     productAreaM.setAttribute("class", "areaM");
-    productAreaM.textContent="متر";
+    productAreaM.textContent = "متر";
     productArea.appendChild(productAreaM);
 
     const productFooter = document.createElement('div');
@@ -496,7 +496,7 @@ function home() {
     document.getElementById("headerHomePage").style.display = "flex";
     document.getElementById("products").style.display = "flex";
     document.getElementById("gallery").style.display = "flex";
-    document.getElementById("regDiv").style.display="none"; 
+    document.getElementById("regDiv").style.display = "none";
 }
 
 
@@ -515,7 +515,7 @@ function contact() {
     document.getElementById("gallery").style.display = "none";
     document.getElementById("containerSingleProduct").style.display = "none";
     document.getElementById("aboutUs").style.display = "none";
-    document.getElementById("regDiv").style.display="none"; 
+    document.getElementById("regDiv").style.display = "none";
     document.getElementById("contact").style.display = "flex";
 }
 
@@ -525,7 +525,7 @@ function aboutUs() {
     document.getElementById("gallery").style.display = "none";
     document.getElementById("containerSingleProduct").style.display = "none";
     document.getElementById("contact").style.display = "none";
-    document.getElementById("regDiv").style.display="none"; 
+    document.getElementById("regDiv").style.display = "none";
     document.getElementById("aboutUs").style.display = "flex";
 
 }
@@ -563,23 +563,23 @@ regDivForm.setAttribute("class", "registerForm");
 regDivForm.setAttribute("id", "registerForm");
 regDiv.appendChild(regDivForm);
 
-const divTab= document.createElement("div");
+const divTab = document.createElement("div");
 divTab.setAttribute("class", "divTab");
 regDivForm.appendChild(divTab);
 
-const tabReg= document.createElement("button");
+const tabReg = document.createElement("button");
 tabReg.setAttribute("class", "tabReg");
 tabReg.setAttribute("id", "tabReg");
-tabReg.textContent="ثبت نام";
+tabReg.textContent = "ثبت نام";
 divTab.appendChild(tabReg);
 
-const tabLog= document.createElement("button");
+const tabLog = document.createElement("button");
 tabLog.setAttribute("class", "tabLog");
 tabLog.setAttribute("id", "tabLog");
-tabLog.textContent="ورود";
+tabLog.textContent = "ورود";
 divTab.appendChild(tabLog);
 
-const formContainer= document.createElement("div");
+const formContainer = document.createElement("div");
 formContainer.setAttribute("class", "formContainer");
 formContainer.setAttribute("id", "formContainer");
 regDivForm.appendChild(formContainer);
@@ -587,13 +587,13 @@ regDivForm.appendChild(formContainer);
 
 
 function register() {
- formContainer.innerHTML="";
+    formContainer.innerHTML = "";
 
     const formReg = document.createElement("div");
     formReg.setAttribute("class", "formReg");
     formReg.setAttribute("id", "formReg");
     formContainer.appendChild(formReg);
-    
+
     const formHeader = document.createElement("div");
     formHeader.setAttribute("class", "formHeader");
     formReg.appendChild(formHeader);
@@ -658,13 +658,13 @@ function register() {
 
 
 function login() {
-    formContainer.innerHTML="";
+    formContainer.innerHTML = "";
 
     const formLog = document.createElement("div");
     formLog.setAttribute("class", "formLog");
     formLog.setAttribute("id", "formLog");
     formContainer.appendChild(formLog);
-    
+
     const formHeader = document.createElement("div");
     formHeader.setAttribute("class", "formHeader");
     formLog.appendChild(formHeader);
@@ -699,22 +699,22 @@ function login() {
 }
 
 
-document.getElementById("regDiv").style.display="none";
-document.getElementById("btnLogin").onclick = () =>{
+document.getElementById("regDiv").style.display = "none";
+document.getElementById("btnLogin").onclick = () => {
     document.getElementById("headerHomePage").style.display = "none";
     document.getElementById("products").style.display = "none";
     document.getElementById("gallery").style.display = "none";
     document.getElementById("contact").style.display = "none";
     document.getElementById("aboutUs").style.display = "none";
-    document.getElementById("regDiv").style.display="flex"; 
+    document.getElementById("regDiv").style.display = "flex";
     login();
 }
 
 
-document.getElementById("tabReg").onclick = () =>{ 
+document.getElementById("tabReg").onclick = () => {
     register();
 }
-document.getElementById("tabLog").onclick = () =>{ 
+document.getElementById("tabLog").onclick = () => {
     login();
 }
 

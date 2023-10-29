@@ -911,6 +911,23 @@ button.tabLog {
     font-family: "Iran Sans";
 }
 
+span.locContent,
+span.areaM,
+span.areaContent,
+span.fa.fa-building-o,
+span.fa.fa-map-marker {
+    color: #757373;
+    font-size: 14px;
+}
+p.currency {
+    color: #757373;
+}
+span.fa.fa-map-marker {
+    width: 5%;
+}
+span.fa.fa-building-o {
+    width: 5%;
+}
 
 
 /* animation infinity gallery */
