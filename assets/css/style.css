@@ -59,6 +59,7 @@ li a.nav {
     align-items: center;
     padding-left: 25px;
 }
+
 li .nav {
     cursor: pointer;
 }
@@ -198,7 +199,7 @@ span.houseNum {
     box-shadow: 0 0 2px 1px #0000002b;
 }
 
-span.boxMaxMin{
+span.boxMaxMin {
     line-height: 1;
     display: flex;
     flex-direction: column;
@@ -207,9 +208,11 @@ span.boxMaxMin{
     font-size: 16px;
     padding: 0;
 }
+
 .iconMax {
     cursor: pointer;
 }
+
 .iconMin {
     cursor: pointer;
 }
@@ -572,13 +575,13 @@ button.addToCardSingle {
     color: #878787;
     border: 2px solid #b7b7b7;
     border-radius: 6px;
-    margin-top: 5%;
+    margin-top: 1%;
 }
 
 button.addToCardSingle:hover {
     background: #009688;
     color: #fff;
-    border: none;
+    border: 2px solid #009688;
 }
 
 input.dateSingleProduct {
@@ -616,10 +619,11 @@ input.NumberSingleProduct {
 .containerContact {
     width: 80%;
     display: flex;
-        margin-bottom: 150px;
-        margin-top: 150px;
-    
+    margin-bottom: 150px;
+    margin-top: 150px;
+
 }
+
 div#contact {
     justify-content: center;
     width: 100%;
@@ -632,7 +636,8 @@ div#contact {
     flex-direction: column;
     width: 50%;
     padding: 10%;
-    box-shadow:0 0 12px 4px #dfdfdf;;
+    box-shadow: 0 0 12px 4px #dfdfdf;
+    ;
     margin-left: 100px;
 }
 
@@ -730,6 +735,7 @@ textarea.commentForm:focus {
     align-items: center;
     width: 100%;
 }
+
 .aboutUsUp {
     display: flex;
     flex-direction: row;
@@ -737,6 +743,7 @@ textarea.commentForm:focus {
     justify-content: center;
     align-items: center;
 }
+
 .aboutUsDown {
     display: flex;
     flex-direction: row;
@@ -747,7 +754,7 @@ textarea.commentForm:focus {
 
 .aboutUsContent {
     width: 33.33%;
-    padding:8px 70px;
+    padding: 8px 70px;
     height: 347px;
     margin: 0px;
 }
@@ -766,10 +773,12 @@ textarea.commentForm:focus {
 .aboutUsImg {
     width: 33.33%;
 }
+
 .aboutUsImg img {
     width: 634px;
     height: 346px;
 }
+
 .aboutUsIcon {
     width: 60px;
     height: 60px;
@@ -779,15 +788,20 @@ textarea.commentForm:focus {
     align-items: center;
     display: flex;
 }
-i.fa.fa-home,i.fa.fa-users,i.fa.fa-cogs {
+
+i.fa.fa-home,
+i.fa.fa-users,
+i.fa.fa-cogs {
     font-size: 30px;
     color: #fff;
 }
+
 h2.aboutUsTitle {
     color: #707070;
     padding: 12px;
     font-size: 30px;
 }
+
 p.aboutUs_title {
     font-size: 15px;
     text-align: justify;
@@ -802,7 +816,7 @@ p.aboutUs_title {
 
 img.avatar {
     width: 50%;
-    padding:5px;
+    padding: 5px;
     border-radius: 50%;
 }
 
@@ -813,6 +827,7 @@ img.avatar {
     justify-content: center;
     align-items: center;
 }
+
 h3.teamName {
     font-size: 15px;
     color: #646464;
@@ -825,12 +840,14 @@ div.regDiv {
     align-items: center;
     padding: 50px;
 }
+
 div#regDiveImg {
     width: 50%;
     display: flex;
     align-items: center;
     justify-content: end;
 }
+
 div.registerForm {
     width: 50%;
     display: flex;
@@ -840,6 +857,7 @@ div.registerForm {
     padding: 10px;
     border-radius: 6px;
 }
+
 .fullName {
     width: 100%;
     display: flex;
@@ -847,8 +865,7 @@ div.registerForm {
 }
 
 input.inputFname,
-input.inputLname
- {
+input.inputLname {
     width: 25%;
     padding: 10px;
     margin: 5px;
@@ -857,9 +874,10 @@ input.inputLname
     font-size: 15px;
     font-family: "Iran Sans";
 }
+
 .anotherInput {
     display: flex;
-    padding-right:20px ;
+    padding-right: 20px;
     flex-direction: column;
     width: 100%;
 }
@@ -880,6 +898,7 @@ input.inputbtnLog {
     font-family: "Iran Sans";
     color: #8d8d8d;
 }
+
 input.inputbtnReg:hover,
 input.inputbtnLog:hover {
     border: 1px solid #017236;
@@ -892,6 +911,7 @@ div.regDiveImg img {
     width: 450px;
     border-radius: 6px;
 }
+
 h2.formHeaderTitle {
     color: #8d8d8d;
     padding: 20px;
@@ -911,6 +931,10 @@ button.tabLog {
     font-family: "Iran Sans";
 }
 
+.bodyHouseCard {
+    padding: 15px;
+}
+
 span.locContent,
 span.areaM,
 span.areaContent,
@@ -919,14 +943,30 @@ span.fa.fa-map-marker {
     color: #757373;
     font-size: 14px;
 }
+
 p.currency {
     color: #757373;
 }
-span.fa.fa-map-marker {
-    width: 5%;
-}
+
+span.fa.fa-map-marker,
 span.fa.fa-building-o {
     width: 5%;
+}
+
+.starOne.fa.fa-star-o,
+.starTwo.fa.fa-star-o,
+.starThree.fa.fa-star-o,
+.starFour.fa.fa-star-o,
+.starFive.fa.fa-star-o {
+    width: 8%;
+}
+
+.starsOne.fa.fa-star-o,
+.starsTwo.fa.fa-star-o,
+.starsThree.fa.fa-star-o,
+.starsFour.fa.fa-star-o,
+.starsFive.fa.fa-star-o {
+    width: 4%;
 }
 
 

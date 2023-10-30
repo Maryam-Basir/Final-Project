@@ -147,8 +147,8 @@ houses.forEach(product => {
     const productLocContent = document.createElement('span');
     productLocContent.setAttribute("class", "locContent");
     const houseCity = cities.find(city => {
-        let locationCity = Number(product.location) == city.id;
-        return locationCity;
+        return Number(product.location) == city.id;
+
     })
     productLocContent.textContent = houseCity.name;
     productLoc.appendChild(productLocContent);
@@ -170,6 +170,30 @@ houses.forEach(product => {
     productAreaM.setAttribute("class", "areaM");
     productAreaM.textContent = "متر";
     productArea.appendChild(productAreaM);
+
+    const productStars = document.createElement('div');
+    productStars.setAttribute("class", "stars");
+    productDes.appendChild(productStars);
+
+    const starOne = document.createElement('span');
+    starOne.setAttribute("class", "starOne fa fa-star-o");
+    productStars.appendChild(starOne);
+
+    const starTwo = document.createElement('span');
+    starTwo.setAttribute("class", "starTwo fa fa-star-o");
+    productStars.appendChild(starTwo);
+
+    const starThree = document.createElement('span');
+    starThree.setAttribute("class", "starThree fa fa-star-o");
+    productStars.appendChild(starThree);
+
+    const starFour = document.createElement('span');
+    starFour.setAttribute("class", "starFour fa fa-star-o");
+    productStars.appendChild(starFour);
+
+    const starFive = document.createElement('span');
+    starFive.setAttribute("class", "starFive fa fa-star-o");
+    productStars.appendChild(starFive);
 
     const productFooter = document.createElement('div');
     productFooter.setAttribute("class", "cardPrice");
@@ -282,6 +306,11 @@ houses.forEach(product => {
         inputNums.setAttribute("class", "NumberSingleProduct");
         inputsSingleProduct.appendChild(inputNums);
 
+        const productStars = document.createElement('div');
+        productStars.setAttribute("class", "stars");
+        footerContentSingleProduct.appendChild(productStars);
+        creatRatingStars(productStars,product);
+
         const addToCardSingle = document.createElement("button");
         addToCardSingle.setAttribute("class", "addToCardSingle");
         addToCardSingle.setAttribute("id", `${product.id}`);
@@ -305,7 +334,29 @@ houses.forEach(product => {
 
 });
 
+function creatRatingStars(productStars,product) {
+    for (let i = 1; i <= 5; i++) {
+        let star = document.createElement('span');
+        star.setAttribute("class", `stars-${i} fa fa-star-o`);
+        star.style.color = "gray";
+        productStars.appendChild(star);
 
+
+        star.onclick = () => {
+            productStars.innerHTML="";
+            creatRatingStars(productStars,product);
+            product.rating =i;
+            for (j=1 ; j<=i ; j++) {
+
+                let fillStar = document.getElementsByClassName(`stars-${j}`)[0];
+                fillStar.classList.remove("fa-star-o");
+                fillStar.classList.add("fa-star");
+                fillStar.style.color = "#FFC107";
+            }
+
+        }
+    }
+}
 
 function creatShopItems(product, mode) {
     let hasProduct = {};
@@ -718,3 +769,8 @@ document.getElementById("tabLog").onclick = () => {
     login();
 }
 
+
+
+function ratingProduct() {
+
+}
